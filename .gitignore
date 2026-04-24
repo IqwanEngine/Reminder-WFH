@@ -1,0 +1,43 @@
+# --- IQWAN ENGINE SECURITY ---
+
+.env
+*.env
+config.py
+secrets.json
+api_key.txt
+service_account.json
+IqwanEngine Trade/api_key.txt
+IqwanEngine Trade/service_account.json
+
+# --- DATABASE (SQLite) ---
+*.db
+*.sqlite3
+instance/
+
+# --- PYTHON STUFF ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# --- MEDIA & LOGS ---
+*.log
+logs/
+.DS_Store
+*.lnk
+*.mp4
+*.mov
+*.mp3
+desktop.ini
+
+# --- PRIVATE DOCUMENTS ---
+Neet To Work/*.docx
+Neet To Work/*.pdf
+
+# --- NOTA PERIBADI ---
+Git Code.txt
+Schedule Update Git.txt
+LINKEDIN.txt
+V1 Old Prompt.txt
