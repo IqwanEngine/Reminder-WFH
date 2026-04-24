@@ -1,14 +1,13 @@
 import os
 import sys
 
-# --- PELINDUNG ANTI-CRASH UNTUK .PYW ---
-# Jika sistem jalan secara 'senyap' dan tiada terminal, buang semua print ke "tong sampah" virtual
+# --- Security IqwanEngine ---
 if sys.stdout is None:
     sys.stdout = open(os.devnull, "w")
 if sys.stderr is None:
     sys.stderr = open(os.devnull, "w")
 
-# Pastikan sistem sentiasa mencari file di dalam folder IqwanEngine
+# IqwanEngine
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # ---------------------------------------
 
@@ -97,7 +96,7 @@ def speak_malay(text):
         set_apps_mute(0)
 
 
-# --- SENARAI PESANAN RAWAK ---
+# --- Listing ---
 pesanan_random = [
     "Hai.. sudah breakfast ke, jom tengok pisi sekejap, update apa yang patut ya?",
     "Adilah.. dah sejam ni. Check lo-gin laptop tau, nanti bos cari pula.",
@@ -109,7 +108,7 @@ pesanan_random = [
 
 print("--- SISTEM REMINDER DILLA BDR (STABLE VERSION) ---")
 
-# --- TEST TERUS MASA RUN ---
+# --- Starting ---
 speak_malay(
     "Testing satu dua tiga. Hello Adilah, saya sudah sedia untuk ingatkan awak esok dan saya sediakan beberapa pesanan dari suami awak encik Iqwan!"
 )
