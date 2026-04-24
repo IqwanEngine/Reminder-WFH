@@ -75,7 +75,6 @@ def speak_voice(
     time.sleep(1)
 
     if papar_popup:
-        # Masa popup keluar ikut panjang suara (intro lebih lama dari reminder)
         durasi_popup = 12 if lang_code == "en" else 4
         threading.Thread(target=tunjuk_popup, args=(teks_popup, durasi_popup)).start()
 
@@ -91,7 +90,7 @@ def speak_voice(
             pass
 
 
-# --- AYAT INTRO (ENGLISH) ---
+# --- INTRO ---
 intro_english = (
     "Hi everyone, quick story I thought I’d share — my wife is now working from home, distractions are real. "
     "So instead of just reminding her the normal way, I decided to engineer a smarter, and slightly fun, solution. "
@@ -99,7 +98,7 @@ intro_english = (
     "Using a dot p y w approach, it stays invisible while doing its job behind the scenes."
 )
 
-# --- SENARAI AYAT TEST (MALAY) ---
+# --- TEST ---
 test_list = [
     "Hai.. sudah breakfast ke, jom tengok pisi sekejap, update apa yang patut ya?",
     "Adilah.. dah sejam ni. Check lo-gin laptop tau, nanti bos cari pula.",
@@ -111,18 +110,15 @@ test_list = [
 
 print("--- MEMULAKAN QC SUARA & VISUAL DILLA (DEMO EDITION) ---")
 
-# Countdown 10 saat sebelum mula
 print("\nSedia untuk record... Sistem akan bermula dalam:")
 for i in range(10, 0, -1):
     print(f"{i} saat...")
     time.sleep(1)
 
-# 1. Mainkan Intro dengan Popup "Hi All, this Just test"
 speak_voice(
     intro_english, lang_code="en", papar_popup=True, teks_popup="Hi All, this Just test"
 )
 
-# 2. Loop senarai Malay dengan Popup asal
 for i, ayat in enumerate(test_list, 1):
     print("\n[Menunggu 10 saat sebelum ayat seterusnya...]")
     time.sleep(10)
